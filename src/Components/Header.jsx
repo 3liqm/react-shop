@@ -28,7 +28,7 @@ const Header = () => {
           <div className="my-2 mx-[50px]">
             <Link to={"/"}>
               {" "}
-              <h2 className="text-3xl font-bold uppercase">ali shop</h2>
+              <h2 className="text-2xl font-bold uppercase">ali shop</h2>
             </Link>
           </div>
           <div className="cursor-pointer flex items-center mx-[50px]">
