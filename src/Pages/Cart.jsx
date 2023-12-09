@@ -8,19 +8,18 @@ const Cart = () => {
   const { cart, clearCart, total, itemAmount } = useContext(cartContext);
 
   return (
-    <div className="h-[150vh]">
+    <div className="">
       <div className="flex justify-center">
         <h1 className="text-3xl font-bold mt-[100px]">Shopping Cart</h1>
       </div>
 
       <div className="container mx-auto ">
-        <div className="flex flex-col  h-[220px] mt-[50px] overflow-y-auto overflow-x-hidden ">
+        <div className="flex flex-col  h-[100%] mt-[50px] mb-[100px]  ">
           {cart.map((item) => {
             return <CartItem item={item} key={item.id} />;
           })}
         </div>
-
-        <div className="flex flex-col md:flex-col lg:flex-row items-center justify-between mt-[60px] ">
+        <div className="flex flex-col md:flex-col lg:flex-row items-center justify-between  mt-[100px] mb-[60px]">
           <div>
             {" "}
             <button
@@ -30,7 +29,7 @@ const Cart = () => {
               Clear Cart
             </button>
           </div>
-          <div className="text-2xl font-semibold mx-2 ">
+          <div className="text-2xl font-semibold ">
             <div className="flex justify-between">
               <span className="text-3xl">Subtotal:</span>{" "}
               <span className="text-red-500 text-2xl">
@@ -51,7 +50,9 @@ const Cart = () => {
             </div>
           </div>
         </div>
+    
       </div>
+    
     </div>
   );
 };

@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ProductContext } from "../Context/ProductContext";
 import { cartContext } from "../Context/CartContext";
-import { FaArrowLeft } from "react-icons/fa6";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -22,12 +21,14 @@ const ProductDetails = () => {
       </section>
     );
   }
-  const { title, price, description, image } = product;
+  const { title, price, description, image, category } = product;
 
   return (
-    <section className="pt-32 pb-12 lg:py-10  flex items-center  h-[140vh]">
+    <section className="h-full lg:py-10  flex items-center  ">
       <div className=" container mx-auto ">
+      <p className="mx-16 my-10 font-semibold text-xl"><Link to={"/"}>Home</Link> / {category} / {title}</p>
         <div className="flex flex-col lg:flex-row items-center justify-between ">
+          
           <div className="mb-8 mx-[70px]">
             <img
               className="max-w-[200px] lg:max-w-{300px]"
@@ -40,7 +41,10 @@ const ProductDetails = () => {
             <div className="text-xl text-red-500 m-6 font-medium">
               $ {price}
             </div>
+            <div>
             <p className=" m-6">{description}</p>
+            <p className="m-6 text-xl font-semibold">Category: {category}</p>
+            </div>
             <button
               onClick={() => addToCart(product, product.id)}
               className="bg-gray-600 py-4 px-8 m-6 text-white font-medium"

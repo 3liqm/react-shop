@@ -6,9 +6,15 @@ const ProductList = () => {
   const { products } = useContext(ProductContext);
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [activeButton, setActiveButton] = useState("all");
-
   useEffect(() => {
-    filterProductsByCategory("all");
+    const savedActiveButton = localStorage.getItem("activeButton");
+
+    if (savedActiveButton) {
+      setActiveButton(savedActiveButton);
+      filterProductsByCategory(savedActiveButton);
+    } else {
+      filterProductsByCategory("all");
+    }
   }, []);
 
   const filterProductsByCategory = (category) => {

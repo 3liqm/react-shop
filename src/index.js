@@ -6,14 +6,12 @@ import reportWebVitals from './reportWebVitals';
 
 //productprovider
 import ProductProvider from './Context/ProductContext';
-//sidebar context
-import SidebarProvider from './Context/Sidebarcontext';
+
 //cart context
 import CartProvider from './Context/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <SidebarProvider>
     <CartProvider>
     <ProductProvider>
    <React.StrictMode>
@@ -21,7 +19,6 @@ root.render(
   </React.StrictMode>
   </ProductProvider>
     </CartProvider>
-  </SidebarProvider>
  
 );
 
