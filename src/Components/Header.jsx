@@ -28,10 +28,9 @@ const Header = () => {
           <div className="my-2 mx-[50px]">
             <Link to={"/"}>
               {" "}
-              <h2 className="text-2xl font-bold uppercase">ali shop</h2>
-            </Link>
+              <h2 className="sm:text-1xl md:text-3xl lg:text-3xl xl:text-6xl text-2xl font-bold uppercase">shop</h2>            </Link>
           </div>
-          <div className="cursor-pointer flex items-center mx-[50px]">
+          <div className="cursor-pointer flex items-center mr-[50px]">
             <Link to={"/cart"}>
               <FaBagShopping className="text-4xl" />
             </Link>
@@ -41,6 +40,12 @@ const Header = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+export default Header;
+
     </div>
   );
 };
