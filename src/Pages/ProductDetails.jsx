@@ -26,7 +26,7 @@ const ProductDetails = () => {
   return (
     <section className="h-full lg:py-10  flex items-center  ">
       <div className=" container mx-auto ">
-      <p className="mx-16 my-10 font-semibold text-xl"><Link to={"/"}>Home</Link> / {category} / {title}</p>
+      <p className="mx-10 my-10 pt-[50px] font-semibold  text-xl"><Link to={"/"}>Home</Link> / {category} / {title}</p>
         <div className="flex flex-col lg:flex-row items-center justify-between ">
           
           <div className="mb-8 mx-[70px]">
@@ -54,6 +54,12 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
+    </section>
+  );
+};
+
+export default ProductDetails;
+
     </section>
   );
 };
