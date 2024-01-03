@@ -60,8 +60,3 @@ const ProductDetails = () => {
 
 export default ProductDetails;
 
-    </section>
-  );
-};
-
-export default ProductDetails;
