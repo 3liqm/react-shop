@@ -1,5 +1,4 @@
 import React, { createContext, useEffect, useState } from "react";
-import { loadStripe } from "@stripe/stripe-js";
 export const cartContext = createContext();
 
 const CartProvider = ({ children }) => {
